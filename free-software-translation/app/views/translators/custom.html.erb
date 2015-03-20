@@ -1,0 +1,19 @@
+<center>
+  <br><img src="<%= asset_path( 'stringfellow-650.png' ) %>" alt="Stringfellow - Free Software Translation" />
+  <h1>Free Software Translation</h1>
+  <h2><strong>"<%= "#{params[:term].upcase}" %>" NOT FOUND!</strong></h2>
+    <p>
+    Your text was not found in our translation database.<br><br> You can try a search below using Microsoft Translator&reg;<br> <em>Please note: the translation may not relate exactly to software terms.</em> <br><br>
+    </p>
+
+    <form action="/custom_translation" method="post">
+      <input type="text" name="translate" value="<%= "#{params[:term]}" %>" required size="90" class="lower" autofocus><br><br>
+      <input type="submit" value="Translate" class="btn">
+    </form>
+
+    <br><br>
+    <a href="/search">New Search</a>
+
+    <br><br><br><br><br>
+
+</center>

@@ -1,0 +1,28 @@
+<h1><div class="transbox">Translation Complete!</div></h1>
+<h2>Just copy and paste the translations below into your localization files.</h2>
+<hr>
+<h2><strong><%= @term.term %></strong></h2>
+<hr>
+<p>
+  
+<% @s2.each do |translator| %>
+   <strong>
+     <%= Lang.find(translator.lang_id).lang %>:&nbsp;
+   </strong> 
+     <%= translator.translator %><br><br>
+<% end %>
+
+</p>
+<hr>
+<p>
+  New Search:<br>
+  <form action="/translation" method="post">
+    <input type="text" name="term" required size="90" class="lower" autofocus><br><br>
+    <input type="submit" value="Translate" class="btn">
+  </form>
+</p>
+<br><a href="/">Home</a>
+<center>
+  <br><br><br><br><br>
+
+</center>

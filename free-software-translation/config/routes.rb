@@ -1,4 +1,15 @@
 FreeSoftwareTranslation::Application.routes.draw do
+  
+  resources :terms, :langs, :translators, :users, :search
+  
+  get "/search" => 'search#index'
+  
+  post "/translation" => 'translators#index'
+  
+  get "/custom" => 'translators#custom'
+  
+  post "/custom_translation" => 'translators#custom_translation'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

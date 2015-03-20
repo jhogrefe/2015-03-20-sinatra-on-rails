@@ -1,0 +1,24 @@
+<h1><div class="transbox">Custom Translation Complete!</div></h1>
+<h2>Just copy and paste the translations below into your localization files.</h2>
+<hr>
+<h2><strong><%= @cs1 %></strong></h2>
+<hr>
+<p>
+   <strong>German:&nbsp;</strong> <%= @de %><br><br>
+   <strong>Spanish:&nbsp;</strong> <%= @es %><br><br>
+   <strong>French:&nbsp;</strong> <%= @fr %><br><br>
+   <strong>Italian:&nbsp;</strong> <%= @it %><br><br>
+</p>
+<hr>
+<p>
+  New Search:<br>
+  <form action="/translation" method="post">
+    <input type="text" name="term" required size="90" class="lower" autofocus><br><br>
+    <input type="submit" value="Translate" class="btn">
+  </form>
+</p>
+<br><a href="/search">Home</a>
+<center>
+  <br><br><br><br><br>
+
+</center>

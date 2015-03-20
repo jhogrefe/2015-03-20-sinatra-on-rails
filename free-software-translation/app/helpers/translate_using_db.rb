@@ -1,6 +1,7 @@
-class Term < ActiveRecord::Base
-  attr_accessible :term
-  
+# Creates new translation object and uses searches database translations table 
+# to return translation.
+module DatabaseTranslation
+
   def translate_using_db
     s1 = Term.new(params)
     if s1.term == ''
@@ -14,5 +15,5 @@ class Term < ActiveRecord::Base
       @s2 = Translator.where({term_id: (s1[0].id)})
     end
   end
-  
+    
 end
