@@ -38,6 +38,7 @@ GEM
       nokogiri (~> 1.6.0)
       savon (~> 2.0)
     builder (3.0.4)
+    coderay (1.1.0)
     erubis (2.7.0)
     execjs (2.4.0)
     gyoku (1.2.3)
@@ -56,6 +57,7 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    method_source (0.8.2)
     mime-types (1.25.1)
     mini_portile (0.6.2)
     multi_json (1.11.0)
@@ -64,6 +66,10 @@ GEM
     nori (2.4.0)
     pg (0.18.1)
     polyglot (0.3.5)
+    pry (0.10.1)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -98,6 +104,7 @@ GEM
       nori (~> 2.4)
       uuid (~> 2.3.7)
       wasabi (~> 3.4)
+    slop (3.6.0)
     sprockets (2.2.3)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -127,5 +134,6 @@ DEPENDENCIES
   bing_translator
   jquery-rails
   pg
+  pry
   rails (= 3.2.21)
   uglifier (>= 1.0.3)

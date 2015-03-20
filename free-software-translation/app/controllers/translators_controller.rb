@@ -2,11 +2,14 @@ class TranslatorsController < ApplicationController
   
   def index
     @term = Term.find_by_term(params[:term])
-    if @term == nil
+    if params[:term] == ''
+      #if term is empty string redirect to search
+      redirect_to "/search"
+    elsif @term == nil
       #if term is not in db redirect to custom search
       redirect_to "/custom?term=#{params[:term]}"
     else
-    @s2 = Translator.where({term_id: (@term.id)})
+      @s2 = Translator.where({term_id: (@term.id)})
     end
   end
   
