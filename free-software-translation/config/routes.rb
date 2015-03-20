@@ -1,6 +1,6 @@
 FreeSoftwareTranslation::Application.routes.draw do
   
-  resources :terms, :langs, :translators, :users, :search
+  resources :terms, :langs, :translators, :users
   
   get "/search" => 'search#index'
   
