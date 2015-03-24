@@ -39,6 +39,9 @@ GEM
       savon (~> 2.0)
     builder (3.0.4)
     coderay (1.1.0)
+    dotenv (2.0.0)
+    dotenv-rails (2.0.0)
+      dotenv (= 2.0.0)
     erubis (2.7.0)
     execjs (2.4.0)
     gyoku (1.2.3)
@@ -132,6 +135,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt
   bing_translator
+  dotenv-rails
   jquery-rails
   pg
   pry

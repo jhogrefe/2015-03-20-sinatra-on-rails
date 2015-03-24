@@ -19,7 +19,7 @@ class TranslatorsController < ApplicationController
   
   def custom_translation
     cs1 = BingTranslator.new('free-software-translation',
-    '6njjbzRCq7rG3+CbFZzN+6jEV5ed63U9+2oqkJ9NuKo=', params)
+    ENV['BING_TRANSLATE_KEY'], params)
     @es = cs1.translate((params[:translate]), :from => 'en', :to => 'es')
     @fr = cs1.translate((params[:translate]), :from => 'en', :to => 'fr')
     @de = cs1.translate((params[:translate]), :from => 'en', :to => 'de')
