@@ -2,13 +2,13 @@ FreeSoftwareTranslation::Application.routes.draw do
   
   resources :terms, :langs, :translators, :users
   
-  get "/search" => 'search#index'
+  get "/main" => 'main#index'
   
-  post "/translation" => 'translators#index'
+  post "/translation" => 'search#index'
   
-  get "/custom" => 'translators#custom'
+  get "/custom" => 'search#custom'
   
-  post "/custom_translation" => 'translators#custom_translation'
+  post "/custom_translation" => 'search#custom_translation'
   
   get "/admin" => 'admin#index'
   
