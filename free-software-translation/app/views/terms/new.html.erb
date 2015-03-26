@@ -1,0 +1,15 @@
+<h1>Add Term</h1>
+
+<p>
+Enter a new English term below.
+</p>
+  
+<p>
+  <%= form_for @term, url: {:action => 'create'} do |f| %>
+    <%= f.text_field 'term' %><br><br>
+    <%= f.submit "Create", :class => 'btn' %>
+  <% end %>
+</p>  
+  
+  
+<br><br><a href="/admin">Admin Home</a>

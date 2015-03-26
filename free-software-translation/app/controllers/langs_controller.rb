@@ -33,7 +33,7 @@ class LangsController < ApplicationController
   def update
     @lang = Lang.find params[:id]
     if @lang.update_attributes(params[:lang])
-      redirect_to :action => 'show', :id => @lang.id
+      redirect_to :action => 'index', :id => @lang.id
     end
   end
   

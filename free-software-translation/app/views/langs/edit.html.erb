@@ -1,0 +1,14 @@
+<h1>Edit Language: <%= @lang.lang %></h1>
+
+<p>
+Change the language below.
+</p>
+
+<p>
+  <%= form_for @lang do |f| %>
+    <%= f.text_field 'lang' %><br><br>
+    <%= f.submit "Save", :class => 'btn' %>
+  <% end %>
+</p><br><br>
+
+<%= link_to 'Back', :action => nil %>

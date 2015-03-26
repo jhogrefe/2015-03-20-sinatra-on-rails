@@ -3,7 +3,7 @@ class TermsController < ApplicationController
   def index
     @term = Term.find :all
   end
-  
+    
   def show
     @term = Term.find params[:id]
   end
@@ -33,7 +33,7 @@ class TermsController < ApplicationController
   def update
     @term = Term.find params[:id]
     if @term.update_attributes(params[:term])
-      redirect_to :action => 'show', :id => @term.id
+      redirect_to :action => 'index', :id => @term.id
     end
   end
 

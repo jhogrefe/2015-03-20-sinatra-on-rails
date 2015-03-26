@@ -1,0 +1,14 @@
+<h1>Edit Term: <%= @term.term %></h1>
+
+<p>
+Change the term below.
+</p>
+
+<p>
+  <%= form_for @term do |f| %>
+    <%= f.text_field 'term' %><br><br>
+    <%= f.submit "Save", :class => 'btn' %>
+  <% end %>
+</p><br><br>
+
+<%= link_to 'Back', :action => nil %>

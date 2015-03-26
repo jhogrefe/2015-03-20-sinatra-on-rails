@@ -1,0 +1,12 @@
+<h1>Languages</h1>
+<h2>Below is the current list of languages.</h2>
+<hr>
+<% @lang.each do |langs| %>
+  <p>
+     <strong>ID:</strong> <%= langs.id %> / <strong>Language:</strong> <%= langs.lang %> <%= link_to 'Edit', :action => 'edit', :id => langs.id %> | 
+      <%= link_to 'Delete', {:action => 'destroy', :id => langs.id}, :confirm => 'Are you sure you want to delete this language?', :method => :delete %>
+  </p>
+<% end %>
+
+<br><a href="/admin">Admin Home</a>&nbsp;&nbsp;
+<a href="/search">Exit Admin</a>

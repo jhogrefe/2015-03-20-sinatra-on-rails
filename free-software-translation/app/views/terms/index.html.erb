@@ -1,0 +1,12 @@
+<h1>Terms</h1>
+<h2>Below is the current list of terms.</h2>
+<hr>
+<% @term.each do |terms| %>
+  <p>
+     <strong>ID:</strong> <%= terms.id %> / <strong>Term:</strong> <%= terms.term %> <%= link_to 'Edit', :action => 'edit', :id => terms.id %> | 
+      <%= link_to 'Delete', {:action => 'destroy', :id => terms.id}, :confirm => 'Are you sure you want to delete this term?', :method => :delete %>
+  </p>
+<% end %>
+
+<br><a href="/admin">Admin Home</a>&nbsp;&nbsp;
+<a href="/search">Exit Admin</a>

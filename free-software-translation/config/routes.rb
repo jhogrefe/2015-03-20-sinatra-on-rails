@@ -10,6 +10,9 @@ FreeSoftwareTranslation::Application.routes.draw do
   
   post "/custom_translation" => 'translators#custom_translation'
   
+  get "/admin" => 'admin#index'
+  
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
