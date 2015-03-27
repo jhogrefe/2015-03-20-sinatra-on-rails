@@ -65,7 +65,7 @@ a:hover, a:focus, a:active {
 	color: #CC6900;
 }
   
-input, textarea, select {
+input, textarea {
   border: 1px solid #555;
   padding: 0.5em;
   font-size: 15px;

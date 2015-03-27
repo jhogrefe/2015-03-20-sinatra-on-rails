@@ -1,3 +1,7 @@
+input, textarea, select {
+  -webkit-appearance: none;
+}
+
 a:link { 
 	font-weight: normal; 
 	color: #0063CC;
@@ -9,8 +13,22 @@ a:visited {
 a:hover, a:focus, a:active { 
 	color: #CC6900;
 	}
+  
+select {
+  border: 1px solid #555;
+  padding: 0.5em;
+  font-size: 15px;
+  line-height: 1.2em;
+  width: 30%;
+  background: #fff;
+  background: -webkit-gradient(linear, 
+    left top, left bottom, from(#ffffff), to(#ffffff));
+  -webkit-border-radius: 4;
+  -moz-border-radius: 4;
+  border-radius: 4px;
+}
 
-input, textarea, select {
+input, textarea {
   border: 1px solid #555;
   padding: 0.5em;
   font-size: 15px;
