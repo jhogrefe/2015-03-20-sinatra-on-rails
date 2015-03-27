@@ -1,0 +1,14 @@
+<h1>Edit Translation: <%= @translator.translator %></h1>
+
+<p>
+Change the translation below.
+</p>
+
+<p>
+  <%= form_for @translator do |f| %>
+    <%= f.text_field 'translator' %><br><br>
+    <%= f.submit "Save", :class => 'btn' %>
+  <% end %>
+</p><br><br>
+
+<%= link_to 'Back', :action => nil %>

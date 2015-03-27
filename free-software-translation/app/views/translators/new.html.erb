@@ -1,0 +1,27 @@
+<h1>Add Translation</h1>
+
+<p>
+Enter a new translation below.
+</p>
+  
+<p>
+  <%= form_for @translator, url: {:action => 'create'} do |f| %>
+    <% terms_array = Term.all.map { |term| 
+      [term.id.to_s + " " + "-" + " " + term.term, term.id] } %>
+    <%= f.select(:term_id, options_for_select(terms_array)) %><br><br>
+
+    <% languages_array = Lang.all.map { |lang| 
+      [lang.id.to_s + " " + "-" + " " + lang.lang, lang.id] } %>
+    <%= f.select :lang_id, options_for_select(languages_array) %><br><br>
+    
+    <%= f.label :translator, 'Translation' %>:<br>
+    <%= f.text_field 'translator' %><br><br>
+    <%= f.submit "Create", :class => 'btn' %>
+  <% end %>
+</p>  
+  
+  
+<br><br><a href="/admin">Admin Home</a>
+
+
+

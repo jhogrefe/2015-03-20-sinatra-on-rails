@@ -33,7 +33,7 @@ class TranslatorsController < ApplicationController
   def update
     @translator = Translator.find params[:id]
     if @translator.update_attributes(params[:translator])
-      redirect_to :action => 'show', :id => @translator.id
+      redirect_to :action => 'index', :id => @translator.id
     end
   end  
   
